@@ -1,6 +1,6 @@
 # JARVIS
 
-Created a voice assistant for myself inspired by Tony Stark's Jarvis from Ironman
+Created a voice assistant for myself inspired by Tony Stark's Jarvis from Ironman 
 
 Used Speech Recognition and gave some commands
 
