@@ -32,7 +32,7 @@ https://github.com/pranaylachuluri/JARVIS/assets/103355762/1a54fc10-e2a4-40e7-aa
 
 1. **Listen**: `speech_recognition` records from the microphone and transcribes speech with Google's speech-to-text API.
 2. **Understand**: the transcribed text is matched against keyword commands.
-3. **Act**: `wikipedia`, `webbrowser` and `os` carry out the task.
+3. **Act**: `wikipedia`, `webbrowser` and `os` carry out the task. Unclear Wikipedia topics, missing pages and network errors are answered out loud instead of crashing.
 4. **Speak**: `pyttsx3` reads the reply aloud with an offline text-to-speech voice and greets you by time of day on start-up.
 
 ## Tech stack
@@ -42,8 +42,8 @@ Python · SpeechRecognition · pyttsx3 · wikipedia · webbrowser · datetime ·
 ## Run it
 
 ```bash
-pip install SpeechRecognition pyttsx3 wikipedia pyaudio
+pip install -r requirements.txt
 python jarvis.py
 ```
 
-Built for Windows (it uses the SAPI5 voice and `os.startfile`). Before running, change `music_dir` in `jarvis.py` to a folder of songs on your computer.
+Works on Windows, macOS and Linux: `pyttsx3` uses the operating system's own voice, and songs open in your default player. "play music" plays from your `~/Music` folder by default; point it somewhere else with the `JARVIS_MUSIC_DIR` environment variable. On Linux, install `espeak` for the voice.
